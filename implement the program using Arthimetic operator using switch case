@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        int a1=s.nextInt();
+        int a2=s.nextInt();
+        char f=s.next().charAt(0);
+        float k=a1+a2;
+        float b=a1-a2;
+        float c=a1*a2;
+        float d=(float)a1/a2;
+        float e=a1%a2;
+       switch (f) 
+       {
+            case '+':
+                System.out.printf("Addition of two number is "+k);
+                break;
+            case '-':
+                System.out.printf("Subtraction of two number is "+ b);
+                break;
+            case '*':
+                System.out.printf("Multiplication of two number is "+c);
+                break;
+            case '/':
+                if(a2 != 0)
+                    System.out.printf("Division of two number is "+d);
+                else
+                    System.out.println("Invalid Input");
+                break;
+            case '%':
+                if (a2 != 0)
+                    System.out.printf("Modulo of two number is "+e);
+               else
+                    System.out.println("Invalid Input");
+                break;
+            default:
+                System.out.println("Invalid Input");
+        }
+}
+}
